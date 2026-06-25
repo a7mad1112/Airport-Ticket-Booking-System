@@ -1,0 +1,45 @@
+# =========================================
+# Custom Project Data
+# =========================================
+# Ignore local test databases and manager CSV uploads
+# (Remove these if you want to commit seed data)
+/data/*.json
+/imports/*.csv
+
+# =========================================
+# .NET & Visual Studio / Rider
+# =========================================
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 2015/2017/2019/2022 cache/options directory
+.vs/
+
+# JetBrains Rider / ReSharper
+.idea/
+*.sln.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
