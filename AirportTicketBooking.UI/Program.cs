@@ -1,8 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using AirportTicketBooking.Application.Interfaces;
-using AirportTicketBooking.Application.Services;
-using AirportTicketBooking.Infrastructure.Parsers;
-using AirportTicketBooking.Infrastructure.Repositories;
+using AirportTicketBooking.UI;
 using AirportTicketBooking.UI.Controllers;
 
 // ── Data file paths ──────────────────────────────────────────────────────────
@@ -13,27 +11,15 @@ var flightsPath  = Path.Combine(baseDir, "data", "flights.json");
 var bookingsPath = Path.Combine(baseDir, "data", "bookings.json");
 
 // ── Service registration ─────────────────────────────────────────────────────
-var services = new ServiceCollection();
+var provider = new ServiceCollection()
+    .AddApplicationServices(flightsPath, bookingsPath)
+    .BuildServiceProvider();
 
-// Infrastructure — repositories receive their file path as a constructor arg.
-services.AddSingleton<IFlightRepository>(_ => new FileFlightRepository(flightsPath));
-services.AddSingleton<IBookingRepository>(_ => new FileBookingRepository(bookingsPath));
-
-// Infrastructure — CSV parser
-services.AddSingleton<IFlightBatchImporter, CsvFlightImportAdapter>();
-
-// Application — services
-services.AddScoped<IFlightService, FlightService>();
-services.AddScoped<IBookingService, BookingService>();
-services.AddScoped<IMetadataService, MetadataService>();
-services.AddScoped<IBatchUploadService, BatchUploadService>();
-
-// UI — controllers
-services.AddScoped<PassengerController>();
-services.AddScoped<ManagerController>();
-services.AddScoped<MainMenuController>();
-
-var provider = services.BuildServiceProvider();
+// ── Data seeding ─────────────────────────────────────────────────────────────
+// Runs before the UI starts. Both operations are idempotent:
+//   • Flights are seeded only when the store is empty.
+//   • The sample CSV is written only if it does not already exist.
+await provider.GetRequiredService<ISeedData>().InitializeAsync();
 
 // ── Entry point ──────────────────────────────────────────────────────────────
 await provider.GetRequiredService<MainMenuController>().StartAsync();
