@@ -1,0 +1,6 @@
+FlightNumber,Departure Country,Departure Airport,Destination Country,Arrival Airport,Departure Date,Base Price (USD),Total Seats
+AA101,United States,LAX,France,CDG,2026-09-10 09:00,550.00,280
+BA249,United Kingdom,LHR,Canada,YYZ,2026-10-18 11:30,490.00,320
+AF006,France,CDG,Japan,NRT,2026-08-25 23:55,870.00,240
+EX999,Jordan,AMM,Germany,FRA,2024-03-01 07:00,300.00,180
+,United States,ORD,Spain,MAD,2026-12-05 16:45,620.00,350

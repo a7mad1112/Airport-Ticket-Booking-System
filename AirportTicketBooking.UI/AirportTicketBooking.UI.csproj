@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
     <ProjectReference Include="..\AirportTicketBooking.Core\AirportTicketBooking.Core.csproj" />
@@ -16,5 +16,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <!-- Copy seed data next to the executable so AppContext.BaseDirectory resolves it. -->
+  <ItemGroup>
+    <Content Include="..\data\flights.json">
+      <Link>data\flights.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
 </Project>

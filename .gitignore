@@ -3,8 +3,8 @@
 # =========================================
 # Ignore local test databases and manager CSV uploads
 # (Remove these if you want to commit seed data)
-/data/*.json
-/imports/*.csv
+# /data/*.json
+# /imports/*.csv
 
 # =========================================
 # .NET & Visual Studio / Rider

@@ -1,0 +1,57 @@
+[
+  {
+    "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "FlightNumber": "EK201",
+    "DepartureCountry": "United Arab Emirates",
+    "DepartureAirport": "DXB",
+    "DestinationCountry": "United Kingdom",
+    "ArrivalAirport": "LHR",
+    "DepartureDate": "2026-08-15T08:30:00",
+    "BasePrice": 420.00,
+    "TotalSeats": 350
+  },
+  {
+    "Id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+    "FlightNumber": "QR145",
+    "DepartureCountry": "Qatar",
+    "DepartureAirport": "DOH",
+    "DestinationCountry": "United States",
+    "ArrivalAirport": "JFK",
+    "DepartureDate": "2026-09-01T14:00:00",
+    "BasePrice": 780.00,
+    "TotalSeats": 300
+  },
+  {
+    "Id": "c3d4e5f6-a7b8-9012-cdef-012345678902",
+    "FlightNumber": "TK002",
+    "DepartureCountry": "Turkey",
+    "DepartureAirport": "IST",
+    "DestinationCountry": "Germany",
+    "ArrivalAirport": "FRA",
+    "DepartureDate": "2026-07-20T06:45:00",
+    "BasePrice": 210.00,
+    "TotalSeats": 250
+  },
+  {
+    "Id": "d4e5f6a7-b8c9-0123-defa-123456789013",
+    "FlightNumber": "SQ318",
+    "DepartureCountry": "Singapore",
+    "DepartureAirport": "SIN",
+    "DestinationCountry": "Australia",
+    "ArrivalAirport": "SYD",
+    "DepartureDate": "2026-10-05T22:15:00",
+    "BasePrice": 560.00,
+    "TotalSeats": 471
+  },
+  {
+    "Id": "e5f6a7b8-c9d0-1234-efab-234567890124",
+    "FlightNumber": "LH400",
+    "DepartureCountry": "Germany",
+    "DepartureAirport": "MUC",
+    "DestinationCountry": "Japan",
+    "ArrivalAirport": "NRT",
+    "DepartureDate": "2026-11-12T10:20:00",
+    "BasePrice": 950.00,
+    "TotalSeats": 400
+  }
+]
