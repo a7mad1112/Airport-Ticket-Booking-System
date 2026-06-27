@@ -2,5 +2,8 @@
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
   </Folder>
+  <Project Path="AirportTicketBooking.Application/AirportTicketBooking.Application.csproj" />
+  <Project Path="AirportTicketBooking.Core/AirportTicketBooking.Core.csproj" />
+  <Project Path="AirportTicketBooking.Infrastructure/AirportTicketBooking.Infrastructure.csproj" />
   <Project Path="AirportTicketBooking.UI/AirportTicketBooking.UI.csproj" />
 </Solution>
