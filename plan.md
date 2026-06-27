@@ -18,8 +18,6 @@ To ensure the code is readable, maintainable, and properly split, this project w
     * Utilizes Dependency Injection.
     * Static methods to cleanly format console output like tables and error messages.
 
-### 1.1. Layer Breakdown
-
 📁 AirportTicketBooking.sln
 │
 ├── 📁 AirportTicketBooking.Core          (Class Library)
@@ -40,6 +38,23 @@ To ensure the code is readable, maintainable, and properly split, this project w
     ├── 📁 Controllers                    // Menus and User Prompts
     ├── 📁 Views                          // Console Table Formatting
     └── 📄 Program.cs                     // Entry point & Dependency Injection Setup
+
+
+### 1.2. Dependency Graph
+This diagram illustrates the direction of dependencies between the class libraries and the console application. In Clean Architecture, all inner logic points toward the Core, while the UI wires everything together via Dependency Injection.
+
+       ┌────────────────────────────────┐
+       │   Presentation Layer (UI)      │
+       └──────┬──────────────────┬──────┘
+              │                  │
+              ▼                  ▼
+┌─────────────────┐       ┌──────────────────────┐
+│ Infrastructure  │       │     Application      │
+└──────┬──────────┘       └──────────┬───────────┘
+       │                             │
+       │       ┌─────────────┐       │
+       └──────►│    Core     │◄──────┘
+               └─────────────┘
 
 ---
 
