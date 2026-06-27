@@ -72,6 +72,9 @@ public sealed class BookingService : IBookingService
     public async Task<IEnumerable<Booking>> GetPassengerBookingsAsync(Guid passengerId) =>
         await _bookingRepository.GetByPassengerIdAsync(passengerId);
 
+    public async Task<IEnumerable<Booking>> GetAllBookingsAsync() =>
+        await _bookingRepository.GetAllAsync();
+
     // Centralises ownership verification so CancelAsync and ModifyAsync
     // both guard against a passenger tampering with another passenger's booking.
     private async Task<Booking> GetOwnedBookingAsync(Guid bookingId, Guid passengerId)

@@ -9,4 +9,5 @@ public interface IBookingService
     Task CancelBookingAsync(Guid bookingId, Guid passengerId);
     Task<Booking> ModifyBookingAsync(Guid bookingId, Guid passengerId, Guid newFlightId, FlightClass newClass);
     Task<IEnumerable<Booking>> GetPassengerBookingsAsync(Guid passengerId);
+    Task<IEnumerable<Booking>> GetAllBookingsAsync();
 }
